@@ -1,0 +1,363 @@
+body{
+  background-image: url(../images/darkWood1.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+.curpage{
+  color: white;
+}
+.setMargin{
+  padding-left:70px;
+  font-family: 'Barlow', sans-serif;
+  padding-bottom: 250px;
+}
+/* NAVIGATION */
+
+.navbar .container-fluid .navbar-collapse>ul>li>a{
+  /* color: #43464b; */
+  color: #ffffff;
+}
+@media screen and (max-width: 767px){
+ .navbar .container-fluid .navbar-collapse>ul>li>a, .navbar-collapse  {
+	color: #ffffff !important;
+  background-color: #43464b;
+  font-size: 15px;
+  text-align: center;
+}
+ .navbar .container-fluid .navbar-collapse>ul>li>a:hover {
+  font-size:18px !important;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+  background-color: #ffffff !important;
+}
+.navbar-inverse .navbar-toggle{
+  border-color: #ffffff !important;
+}
+}
+.navbar .container-fluid{
+  font-weight: 900;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.navbar-inverse  {
+  border-color: transparent !important;
+}
+/* Navigation hover effects begin */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+h1:before{
+  content: "// ";
+}
+h1{
+  font-size:3em;
+  color:white;
+  text-transform:lowercase;
+}
+.wrapper{
+  margin:3em 0;
+}
+a,a:visited,a:hover,a:active{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+	position:relative;
+  transition:0.5s color ease;
+	text-decoration:none;
+	color:white !important;
+	font-size:1.2em;
+}
+a:hover{
+	color:white !important;
+}
+a.before:before,a.after:after{
+  content: "";
+  transition:0.5s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+  background: #ffffff !important;
+}
+a.before:before{
+  top:0.25em;
+}
+a.after:after{
+  bottom:0.25em;
+}
+a.before:before,a.after:after{
+  height:2px;
+  height:0.2rem;
+  width:0;
+  background:#43464b;
+}
+a.first:after{
+  left:0;
+}
+a.second:after{
+  right:0;
+}
+a.third:after,a.sixth:before,a.sixth:after{
+  left:50%;
+  -webkit-transform:translateX(-50%);
+          transform:translateX(-50%);
+}
+a.fourth:before,a.fourth:after{
+  left:0;
+}
+a.fifth:before,a.fifth:after{
+  right:0;
+}
+a.seventh:before{
+  right:0;
+}
+a.seventh:after{
+  left:0;
+}
+a.eigth:before{
+  left:0;
+}
+a.eigth:after{
+  right:0;
+}
+a.before:hover:before,a.after:hover:after{
+  width:100%;
+}
+.square{
+  box-sizing:border-box;
+  margin-left:-0.4em;
+  position:relative;
+  font-size:2.5em;
+  overflow:hidden;
+}
+.square a{
+  position:static;
+  font-size:100%;
+  padding:0.2em 0.4em;
+}
+.square:before,.square:after{
+  content: "";
+  box-sizing:border-box;
+  transition:0.25s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+  width:5px;
+  width:0.35rem;
+  height:0;
+  background:#d73444;
+}
+.square:before{
+  left:0;
+  bottom:-0.2em;
+}
+.square.individual:before{
+  transition-delay:0.6s;
+}
+.square:after{
+  right:0;
+  top:-0.2em;
+}
+.square.individual:after{
+  transition-delay:0.2s;
+}
+.square a:before{
+  left:0;
+  transition:0.25s all ease;
+}
+.square a:after{
+  right:0;
+  transition:0.25s all ease;
+}
+.square.individual a:after{
+  transition:0.25s all ease 0.4s;
+}
+.square:hover:before,.square:hover:after{
+  height:calc(100% + 0.4em);
+}
+.square:hover a:before,.square:hover a:after{
+  width:100%;
+}
+/*NAVIGATION END */
+
+#reviewIntro{
+  margin: 60px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Barlow', sans-serif;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+ #reviewForm{
+  margin: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(211,211,211,.4);
+  width: 25%;
+  position: fixed;
+  left: 65%;
+  color: #ffffff;
+  font-weight: 900;
+}
+#reviewForm::after{
+  content: "";
+  background-image: url("../images/musicNotes1.png");
+  background-size: 70%;
+  opacity: .1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+ #leaveReview{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: 15px;
+}
+.setMarging{
+  margin-bottom: 30px;
+}
+.reviewFont{
+  font-size: 20px;
+  width: 60%;
+  color: #ffffff;
+}
+
+.rating {
+  margin-top: 10px;
+  border: none;
+  display: inline-block;
+}
+
+.rating > label {
+  color: #43464b;
+  float: right;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 2em;
+  font-family: FontAwesome;
+  content: "\f005";
+  display: inline-block;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #F79426;
+}
+
+.btn{
+  background-color: #43464b;
+  margin-left: 75%;
+  color: #ffffff;
+}
+
+/* .rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #FECE31;
+} */
+
+/* FOOTER */
+#contact{
+  background-color: #D3D3D3;
+  height: 250px;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 30px;
+  color: black;
+  letter-spacing: 3px;
+  padding-top: 20px;
+}
+#contactInfo{
+  font-size: 18px;
+  padding-top: 10px;
+  line-height: 1.5;
+}
+#thumbtack img{
+  height:25px;
+}
+.links{
+  padding-top: 10px;
+}
+/* icon styling */
+#fa {
+  padding-top: 7px;
+  color: black;
+  font-size: 3.8rem;
+}
+#linkedin{
+  color: black;
+}
+#copyright{
+  text-align: center;
+  background-color: #D3D3D3;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+}
+#copyright a{
+  color: black;
+  font-size: 15px;
+  font-family: 'Barlow', sans-serif;
+}
+
+@media screen and (max-width: 1032px){
+  body{
+    align-content: center;
+  }
+  .setMargin{
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding-left:0px;
+    left: 0;
+    right: 0;
+  }
+  #leaveReview{
+    padding-top: 30px;
+  }
+  #reviewForm{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 500px;
+  	left: 0;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .review{
+    margin-top: 0 auto;
+  }
+  form{
+    padding-bottom: 7px;
+  }
+  .reviewFont {
+    margin: auto;
+    font-size: 15px;
+  }
+
+}
+@media screen and (max-width: 1024px){
+  body{
+    background-image: url(../images/darkWood.png);
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-size: auto;
+  }
+}
+@media screen and (max-width: 550px){
+#reviewForm{
+  width: 80%;
+  left: 0;
+}
+}

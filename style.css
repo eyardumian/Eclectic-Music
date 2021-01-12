@@ -1,0 +1,557 @@
+body, html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  }
+
+/* NAVIGATION BEGIN */
+.navbar .container-fluid .navbar-collapse>ul>li>a{
+  color: #43464b;
+}
+@media screen and (max-width: 767px){
+ .navbar .container-fluid .navbar-collapse>ul>li>a, .navbar-collapse  {
+	color: #ffffff !important;
+  background-color: #43464b;
+  font-size: 15px;
+  text-align: center;
+}
+ .navbar .container-fluid .navbar-collapse>ul>li>a:hover {
+  font-size:18px !important;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+  background-color: black !important;
+}
+}
+.navbar .container-fluid{
+  font-weight: 900;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.navbar-inverse  {
+  border-color: transparent !important;
+}
+
+/* NAVIGATION HOVER EFFECTS BEGIN */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+h1:before{
+  content: "// ";
+}
+h1{
+  font-size:3em;
+  color:#fefefe;
+  text-transform:lowercase;
+}
+.wrapper{
+  margin:3em 0;
+}
+a,a:visited,a:hover,a:active{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+	position:relative;
+  transition:0.5s color ease;
+	text-decoration:none;
+	color:white;
+	font-size:1.2em;
+}
+a:hover{
+	color:white;
+}
+a.before:before,a.after:after{
+  content: "";
+  transition:0.5s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+}
+a.before:before{
+  top:0.25em;
+}
+a.after:after{
+  bottom:0.25em;
+}
+a.before:before,a.after:after{
+  height:2px;
+  height:0.2rem;
+  width:0;
+  background:#43464b;
+}
+a.first:after{
+  left:0;
+}
+a.second:after{
+  right:0;
+}
+a.third:after,a.sixth:before,a.sixth:after{
+  left:50%;
+  -webkit-transform:translateX(-50%);
+          transform:translateX(-50%);
+}
+a.fourth:before,a.fourth:after{
+  left:0;
+}
+a.fifth:before,a.fifth:after{
+  right:0;
+}
+a.seventh:before{
+  right:0;
+}
+a.seventh:after{
+  left:0;
+}
+a.eigth:before{
+  left:0;
+}
+a.eigth:after{
+  right:0;
+}
+a.before:hover:before,a.after:hover:after{
+  width:100%;
+}
+.square{
+  box-sizing:border-box;
+  margin-left:-0.4em;
+  position:relative;
+  font-size:2.5em;
+  overflow:hidden;
+}
+.square a{
+  position:static;
+  font-size:100%;
+  padding:0.2em 0.4em;
+}
+.square:before,.square:after{
+  content: "";
+  box-sizing:border-box;
+  transition:0.25s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+  width:5px;
+  width:0.35rem;
+  height:0;
+  background:#d73444;
+}
+.square:before{
+  left:0;
+  bottom:-0.2em;
+}
+.square.individual:before{
+  transition-delay:0.6s;
+}
+.square:after{
+  right:0;
+  top:-0.2em;
+}
+.square.individual:after{
+  transition-delay:0.2s;
+}
+.square a:before{
+  left:0;
+  transition:0.25s all ease;
+}
+.square a:after{
+  right:0;
+  transition:0.25s all ease;
+}
+.square.individual a:after{
+  transition:0.25s all ease 0.4s;
+}
+.square:hover:before,.square:hover:after{
+  height:calc(100% + 0.4em);
+}
+.square:hover a:before,.square:hover a:after{
+  width:100%;
+}
+/* NAVIGATION END  */
+
+/* BEGIN SLIDE SHOW */
+ button span .icon-bar{
+  color: black;
+
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  /* max-width: 1000px; */
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 45px;
+  font-weight: bolder;
+  /* padding: 8px 12px; */
+  position: absolute;
+  /* bottom: 43%; */
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 4px;
+  display: block;
+  top: 15%;
+      left: 55%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      margin-right: 20px;
+    }
+
+.MySlides img{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 650px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .7}
+  to {opacity: 1}
+}
+
+
+/* END SLIDE SHOW */
+
+#bio{
+  margin-top: 25px;
+  /* background-color: grey; */
+  align-content: center;
+}
+
+#title{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Barlow', sans-serif;
+  /* color: #DAA520; */
+}
+
+#line{
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#paul {
+  /* align-items: center; */
+  width: 100%;
+  margin-bottom: 40px;
+  margin-left: 10%;
+}
+#about{
+  margin-left: 6%;
+  font-size: 18px;
+  text-indent: 15%;
+  align-items: center;
+  line-height: 2;
+  font-family: 'Barlow', sans-serif;
+}
+.tinRightIn {
+  animation-name: tinRightIn;
+}
+@keyframes tinRightIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateX(900%);
+  }
+
+  50%, 70%, 90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateX(0);
+  }
+
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
+  }
+}
+.lessons{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 15%;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 4px;
+  /* background-image: url("../images/images-2.jpg"); */
+}
+
+#lessonLink{
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../images/guitarflat.png");
+    /* Set a specific height */
+    min-height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lessonLink{
+  color: #DAA520;
+}
+
+#reviews{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#review{
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  line-height: 2;
+}
+.reviewer{
+  margin-top: 15px;
+  font-family: 'Barlow:500', sans-serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+#reviewLink {
+ margin-top: 30px;
+ margin-bottom: 30px;
+ color: #DAA520;
+}
+
+.item{
+  /* height: 300px; */
+  border-style: solid;
+  border-color: black;
+  box-sizing: 3px;
+}
+
+.owl-carousel{
+  margin-bottom: 30px;
+}
+
+
+
+
+#store{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#store a{
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 40px;
+  color: salmon;
+}
+
+#storeDesc{
+  font-size: 23px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+#contact{
+  background-color: #D3D3D3;
+  height: 250px;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 30px;
+  color: black;
+  letter-spacing: 3px;
+  padding-top: 20px;
+}
+#contactInfo{
+  font-size: 18px;
+  padding-top: 10px;
+  line-height: 1.5;
+}
+#thumbtack img{
+  height:25px;
+}
+.links{
+  padding-top: 10px;
+}
+
+/* icon styling */
+#linkedin{
+  color: black;
+}
+#copyright{
+  text-align: center;
+  background-color: #D3D3D3;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+#copyright a{
+  color: black;
+  font-size: 15px;
+  font-family: 'Barlow', sans-serif;
+}
+@media screen and (max-width: 1800px){
+  .mySlides img{
+    height: 1050px;
+  }
+}
+@media screen and (max-width: 1700px){
+  .mySlides img{
+    height: 950px;
+  }
+}
+@media screen and (max-width: 1600px){
+  .mySlides img{
+    height: 850px;
+  }
+}
+@media screen and (max-width: 1500px){
+  .mySlides img{
+    height: 750px;
+  }
+}
+@media screen and (max-width: 1400px){
+  .mySlides img{
+    height: 690px;
+  }
+}
+@media screen and (max-width: 1300px){
+  .mySlides img{
+    height: 600px;
+  }
+}
+@media screen and (max-width: 1080px){
+   .mySlides img{
+    height: 550px;
+  }
+}
+@media screen and (max-width: 880px){
+  .mySlides img{
+    height: 500px;
+  }
+  #about{
+    line-height: 1.5;
+  }
+}
+@media screen and (max-width: 767px){
+  #about{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-indent: 0px;
+  }
+}
+@media screen and (max-width: 730px){
+  .text{
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 660px){
+  .mySlides img{
+    height: 400px;
+  }
+}
+@media screen and (max-width: 560px){
+  .mySlides img{
+    height: 350px;
+  }
+  .text{
+    font-size: 25px;
+  }
+}
+/* On smaller screens, decrease text size */
+@media  screen and (max-width: 538px) {
+  .prev, .next,.text {
+    font-size: 15px
+  }
+  .navbar .container-fluid{
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 460px){
+  .mySlides img{
+    height: 300px;
+  }
+  .lessons{
+    font-size: 25px;
+    margin-top: none;
+  }
+  .item{
+    height: 300px;
+    width: 300px;
+  }
+}
